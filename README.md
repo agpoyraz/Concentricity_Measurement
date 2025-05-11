@@ -60,6 +60,46 @@ im = imread('Images\GoodImages\CCD4\0035.bmp');
 %c2: Devernay Algorithm
 %c3: Subpixel Edges
 The script displays the image with center points and distance visualizations.
+```
+
+## 📊 Evaluation Metrics
+
+To evaluate and compare the performance of different image-based concentricity measurement methods against reference measurements obtained from a Coordinate Measuring Machine (CMM), the following metrics were used:
+
+### 🔹 Normalized Concentricity
+
+Normalized concentricity quantifies the alignment between the centers of inner and outer circles as a proportion of the outer diameter:
+
+Concentricity_norm = || C_outer − C_inner || / D_outer
+
+This formulation ensures scale independence, enabling comparisons across parts with varying sizes.
+
+---
+
+### 🔹 Pearson Correlation Coefficient
+
+To assess the statistical agreement between each method and the CMM measurements, the Pearson correlation coefficient was computed:
+
+r = sum((xi - x̄)(yi - ȳ)) / sqrt(sum((xi - x̄)^2) * sum((yi - ȳ)^2))
+
+This value ranges from -1 to 1:
+- \( r = 1 \): perfect positive linear relationship
+- \( r = 0 \): no linear correlation
+- \( r = -1 \): perfect negative linear relationship
+
+---
+
+### 🔹 Mean Absolute Error (MAE)
+
+MAE indicates the average magnitude of deviation between algorithmic outputs and reference CMM values:
+
+MAE = (1/n) * Σ |yᵢ − ŷᵢ|
+
+Lower MAE values correspond to more accurate measurement results.
+
+---
+
+These metrics provide a comprehensive evaluation of each method in terms of both accuracy and consistency, and are especially useful for determining the robustness of each approach in the presence of noise or outliers.
 
 📖 License
 MIT License – You may freely use, modify, and distribute this code for academic or industrial purposes. Please cite the work if used in research.

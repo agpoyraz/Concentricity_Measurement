@@ -2,6 +2,8 @@
 
 This project shares an industrial machine vision dataset for washer-like metal parts and compares subpixel-based methods for measuring the **concentricity** of circular features.
 
+The system calculates **normalized concentricity**, defined as the Euclidean distance between the centers of the inner and outer circles divided by the outer diameter. This approach ensures that the measurement is **scale-invariant** and can be compared across parts of different sizes.
+
 🔗 GitHub Repository: [https://github.com/agpoyraz/Concentricity_Measurement](https://github.com/agpoyraz/Concentricity_Measurement)
 
 ---

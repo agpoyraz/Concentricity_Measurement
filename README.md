@@ -25,12 +25,12 @@ The dataset includes precise dimensional measurements obtained using a Coordinat
 
 ### 🔍 Camera Configuration:
 
-| Camera ID | Viewpoint       | Illumination Type        | Purpose                            |
-|-----------|------------------|---------------------------|-------------------------------------|
-| CCD1      | Top View         | Ring Light                | Outer diameter measurement         |
-| CCD2      | Side View        | Direct Lighting           | Thickness measurement              |
-| CCD3      | Bottom View      | Ring Light                | Inner diameter measurement         |
-| CCD4      | Bottom View      | Backlight + Telecentric Lens | High-precision concentricity & edge analysis |
+| Camera ID | Viewpoint       | Illumination Type        | 
+|-----------|------------------|---------------------------|
+| CCD1      | Top View         | Ring Light                |
+| CCD2      | Side View        | Direct Lighting           |
+| CCD3      | Bottom View      | Ring Light                |
+| CCD4      | Bottom View      | Backlight + Telecentric Lens |
 
 ---
 

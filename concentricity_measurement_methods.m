@@ -1,5 +1,5 @@
 % görüntü çap ölçme algoritması
-function [c1, c2, c3] = concentricity_measurement_methods(im)
+function [c1, c2, c3, c4] = concentricity_measurement_methods(im)
 
     im = eliminate_small_objects(im,254); % th = 254 
     %% Algorithm 1 Connected Component Based Concentricity Measurement
@@ -31,3 +31,6 @@ function [c1, c2, c3] = concentricity_measurement_methods(im)
     % DOI:
     c3 = matlab_code_for_concentricity(im_outer,im_inner);
 
+    %% Algorithm 4 Proposed
+    % DOI:
+    c4 = proposed_method(im_outer,im_inner);

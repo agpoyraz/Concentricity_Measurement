@@ -1,8 +1,10 @@
 # Concentricity_Measurement
 
-This project shares an industrial machine vision dataset for washer-like metal parts and compares subpixel-based methods for measuring the **concentricity** of circular features.
+This project shares an industrial machine vision dataset for washer-like metal parts and evaluates multiple subpixel-based methods for measuring the **concentricity** of circular features. 
 
-The system calculates **normalized concentricity**, defined as the Euclidean distance between the centers of the inner and outer circles divided by the outer diameter. This approach ensures that the measurement is **scale-invariant** and can be compared across parts of different sizes.
+A newly proposed **Subpixel Intensity-Weighted Centroid Algorithm** is introduced, which improves robustness against edge noise and local defects. It is evaluated in comparison with classical methods and a commercial PSG device.
+
+The system calculates **normalized concentricity**, defined as the Euclidean distance between the centers of the inner and outer circles divided by the outer diameter. This scale-invariant metric allows meaningful comparisons across parts of different sizes.
 
 🔗 GitHub Repository: [https://github.com/agpoyraz/Concentricity_Measurement](https://github.com/agpoyraz/Concentricity_Measurement)
 
@@ -76,16 +78,17 @@ Three different methods are applied to extract circular edge features and measur
 
 ## ⚙️ How to Use
 
-1. Clone this repository or download the ZIP file.
-2. Place your images inside `sample_images/`.
-3. Run the following command in MATLAB:
+1. Clone or download this repository.
+2. Place your images in `Images/GoodImages/`.
+3. Run in MATLAB:
 
 ```matlab
 im = imread('Images\GoodImages\CCD4\0035.bmp');
-[c1, c2, c3] = concentricity_measurement_methods(im);
-%c1: Canny based concentricity
-%c2: Devernay Algorithm
-%c3: Subpixel Edges
+[c1, c2, c3, c4] = concentricity_measurement_methods(im);
+%c1: Canny
+%c2: Devernay
+%c3: SubEdge
+%c4: Proposed Intensity-Weighted Method
 The script displays the image with center points and distance visualizations.
 ```
 
@@ -103,18 +106,6 @@ This formulation ensures scale independence, enabling comparisons across parts w
 
 ---
 
-### 🔹 Pearson Correlation Coefficient
-
-To assess the statistical agreement between each method and the CMM measurements, the Pearson correlation coefficient was computed:
-
-r = sum((xi - x̄)(yi - ȳ)) / sqrt(sum((xi - x̄)^2) * sum((yi - ȳ)^2))
-
-This value ranges from -1 to 1:
-- \( r = 1 \): perfect positive linear relationship
-- \( r = 0 \): no linear correlation
-- \( r = -1 \): perfect negative linear relationship
-
----
 
 ### 🔹 Mean Absolute Error (MAE)
 

@@ -1,4 +1,5 @@
 
+📌 **Important Notice:** The contents of this repository will be updated following the publication of the corresponding research paper. Detailed guidance on the implementation and usage of the proposed method will be provided at that time.  
 ## 📁 Dataset
 
 This dataset consists of images captured using an industrial machine vision system to inspect circular (washer-type) metal parts.
